@@ -4,14 +4,14 @@
 	<name>base45</name>
 	<groupId>io.github.ehn-digital-green-development</groupId>
 	<artifactId>base45</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<packaging>jar</packaging>
 
 	<scm>
 		<connection>scm:git:git://github.com/dexecutor/dependent-tasks-executor.git</connection>
 		<developerConnection>scm:git:git@github.com:dexecutor/dexecutor.git</developerConnection>
 		<url>https://github.com/dexecutor/dependent-tasks-executor</url>
-		<tag>HEAD</tag>
+		<tag>base45-0.0.1</tag>
 	</scm>
 
 	<distributionManagement>
