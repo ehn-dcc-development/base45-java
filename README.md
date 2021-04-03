@@ -26,3 +26,5 @@ mvn clean install
 ## Code coverage
 Locally with the browser:
 target/site/jacoco/nl.minvws.encoding/index.html
+
+![branches](.github/badges/branches.svg) ![branches](.github/badges/jacoco.svg)
