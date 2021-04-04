@@ -13,7 +13,7 @@ String encodedString = Base45.getEncoder().encodeToString(originalInput.getBytes
 
 And decode back:
 ```
-byte[] decodedBytes = Base44.getDecoder().decode(encodedString);
+byte[] decodedBytes = Base45.getDecoder().decode(encodedString);
 String decodedString = new String(decodedBytes);
 ```
 
