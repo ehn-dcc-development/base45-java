@@ -3,7 +3,16 @@ Simple Base45 implementation, based off https://datatracker.ietf.org/doc/draft-f
 Java 1.8+
 
 ## Typical usage
-Same as Base64.
+Add it as a dependency:
+```
+<dependency>
+  <groupId>io.github.ehn-digital-green-development</groupId>
+  <artifactId>base45</artifactId>
+  <version>0.0.2</version>
+</dependency>
+```
+
+After that you can use it the same way you would use Base64.
 
 Encode:
 ```
