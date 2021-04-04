@@ -6,6 +6,20 @@
 	<artifactId>base45</artifactId>
 	<version>0.0.3-SNAPSHOT</version>
 	<packaging>jar</packaging>
+	<description>Java implementation of base45 for Qr codes</description>
+	<url>https://github.com/ehn-digital-green-development/base45-java</url>
+	<licenses>
+		<license>
+			<name>SPDX-License-Identifier: EUPL-1.2</name>
+			<url>https://opensource.org/licenses/EUPL-1.2</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<name>Bennie Schut</name>
+			<email>bennie@schut.cc</email>
+		</developer>
+	</developers>
 
 	<scm>
 		<connection>scm:git:git://github.com/dexecutor/dependent-tasks-executor.git</connection>
@@ -120,7 +134,7 @@
 				<extensions>true</extensions>
 				<configuration>
 					<serverId>ossrh</serverId>
-					<nexusUrl>https://oss.sonatype.org/</nexusUrl>
+					<nexusUrl>https://s01.oss.sonatype.org/</nexusUrl>
 					<autoReleaseAfterClose>true</autoReleaseAfterClose>
 				</configuration>
 			</plugin>
