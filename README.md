@@ -1,6 +1,15 @@
 # Base45
+
 Simple Base45 implementation, based off https://datatracker.ietf.org/doc/draft-faltstrom-base45/ \
 Java 1.8+
+
+Designed to align with QR code (ISO/IEC 18004:2015) standard and the 'Mode 2/0010' alphanummeric
+characters set.
+
+# Base45tight
+Base45 implementation, based on the https://tools.ietf.org/id/draft-msporny-base58-01.html draft; 
+which is commonly used in the bitcoin community for similarly sized strings. Significantly slower
+than above Base45; but around 3% more compact.
 
 ## Typical usage
 Same as Base64.
