@@ -70,15 +70,16 @@ public class Base45 {
             int resultIndex = 0;
             int wholeChunkLength = wholeChunkCount * ChunkSize;
             for (int i = 0; i < wholeChunkLength;) {
-                int value = (src[i++] & 0xff) * ByteSize + (src[i++] & 0xff) ;
+                int value = (src[i++] & 0xff) * ByteSize + (src[i++] & 0xff);
                 result[resultIndex++] = toBase45[value % BaseSize];
                 result[resultIndex++] = toBase45[(value / BaseSize) % BaseSize];
                 result[resultIndex++] = toBase45[(value / (BaseSize * BaseSize)) % BaseSize];
             }
 
             if (src.length % ChunkSize != 0) {
-                result[result.length - 2] = toBase45[(src[src.length - 1] & 0xff) % BaseSize] ;
-                result[result.length - 1] = (src[src.length - 1] & 0xff) < BaseSize ? toBase45[0] : toBase45[(src[src.length - 1] & 0xff) / BaseSize % BaseSize];
+                result[result.length - 2] = toBase45[(src[src.length - 1] & 0xff) % BaseSize];
+                result[result.length - 1] = (src[src.length - 1] & 0xff)
+                        < BaseSize ? toBase45[0] : toBase45[(src[src.length - 1] & 0xff) / BaseSize % BaseSize];
             }
             return result;
         }
