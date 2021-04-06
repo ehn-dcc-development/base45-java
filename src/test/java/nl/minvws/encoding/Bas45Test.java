@@ -16,6 +16,10 @@ public class Bas45Test {
         assertEquals("%69 VD92EX0", Base45.getEncoder().encodeToString("Hello!!".getBytes(StandardCharsets.UTF_8)));
         assertEquals("UJCLQE7W581", Base45.getEncoder().encodeToString("base-45".getBytes(StandardCharsets.UTF_8)));
         assertThrows(NullPointerException.class, ()->{ Base45.getEncoder().encodeToString(null); });
+
+        // because java is signed make sure we test a value passed 128
+        assertEquals("3XO", Base45.getEncoder().encodeToString("è".getBytes(StandardCharsets.UTF_8)));
+
     }
 
     @Test
@@ -42,5 +46,4 @@ public class Bas45Test {
         assertThrows(NullPointerException.class, ()->{ Base45.getDecoder().decode((byte[]) null); });
         assertThrows(IllegalArgumentException.class, ()->{ Base45.getDecoder().decode("a".getBytes(StandardCharsets.UTF_8)); });
     }
-
 }
