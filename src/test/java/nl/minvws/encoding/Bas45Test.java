@@ -45,5 +45,6 @@ public class Bas45Test {
         assertArrayEquals("Hello!!".getBytes(StandardCharsets.UTF_8), Base45.getDecoder().decode("%69 VD92EX0".getBytes(StandardCharsets.UTF_8)));
         assertThrows(NullPointerException.class, ()->{ Base45.getDecoder().decode((byte[]) null); });
         assertThrows(IllegalArgumentException.class, ()->{ Base45.getDecoder().decode("a".getBytes(StandardCharsets.UTF_8)); });
+        assertThrows(IllegalArgumentException.class, ()->{ Base45.getDecoder().decode("GGW".getBytes(StandardCharsets.UTF_8)); });
     }
 }

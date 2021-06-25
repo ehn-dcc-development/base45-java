@@ -156,6 +156,9 @@ public class Base45 {
             int wholeChunkLength = wholeChunkCount * EncodedChunkSize;
             for (int i = 0;  i < wholeChunkLength; ) {
                 int val = buffer[i++] + BaseSize * buffer[i++] + BaseSize * BaseSize * buffer[i++];
+                if (val > 0xFFFF) {
+                    throw new IllegalArgumentException();
+                }
                 result[resultIndex++] = (byte)(val / ByteSize);
                 result[resultIndex++] = (byte)(val % ByteSize);
             }
